@@ -1,0 +1,22 @@
+var usm;
+
+function setup() {
+  createCanvas(400, 400);
+  usm = new mapache();
+  frameRate(16);
+}
+
+function draw() {
+  background(220);
+  if (keyIsPressed && keyCode == 39) {
+    usm.moverDer();
+  } else if (keyIsPressed && keyCode == 37) {
+    usm.moverIzq();
+  }
+  if (keyCode == 39) {
+    usm.mostrarIzq();
+  }
+  if (keyCode == 37) {
+    usm.mostrar();
+  }
+}
